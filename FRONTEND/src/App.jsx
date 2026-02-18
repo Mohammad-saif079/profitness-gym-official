@@ -4,13 +4,14 @@ import Home from "./pages/Home.jsx"
 
 import Signup from "./pages/Signup.jsx"
 import { Signupprovider } from './context/Signupcontext.jsx'
-import Chat from './pages/Chat.jsx'
-import { ChatProvider } from './context/Chatcontext.jsx'
-import ProtectedRoute from './components/ProtectedRoute.jsx'
-import { useAuth } from './context/Authcontext.jsx'
+// import Chat from './pages/Chat.jsx'
+// import { ChatProvider } from './context/Chatcontext.jsx'
+// import ProtectedRoute from './components/ProtectedRoute.jsx'
+// import { useAuth } from './context/Authcontext.jsx'
 import LoginCheck from './components/LoginCheck.jsx'
+import Gymhome from './pages/Gymhome.jsx'
 
-import VideoPlayer from './pages/Video.jsx'
+// import VideoPlayer from './pages/Video.jsx'
 
 const App = () => {
 
@@ -18,10 +19,9 @@ const App = () => {
 
     <>
       <Routes>
-        <Route path='/' element={<LoginCheck><Signupprovider><Home /></Signupprovider></LoginCheck>} />
-        <Route path='/signup' element={<LoginCheck><Signupprovider><Signup /></Signupprovider></LoginCheck>} />
-        <Route path='/chats/:chatid?' element={<ProtectedRoute><ChatProvider><Chat /></ChatProvider></ProtectedRoute>} />
-        <Route path='/video' element={<VideoPlayer/>} />
+        <Route path='/login' element={<Signupprovider><Home /></Signupprovider>} />
+        <Route path='/signup' element={<Signupprovider><Signup /></Signupprovider>} />
+        <Route path='/' element={<Signupprovider><Gymhome /></Signupprovider>} />
 
       </Routes>
     </>

@@ -51,7 +51,7 @@ const Input = (props) => {
                 : props.ispassword ? password_input : normal}
 
 
-            <h1 className=' text-[18px] h-[28px] text-[#FF0038] ' >{props.error}</h1>
+            <h1 className='upper text-[18px] h-[28px] text-[#FF0038] ' >{props.error}</h1>
 
 
         </div>
